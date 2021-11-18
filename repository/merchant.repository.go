@@ -50,8 +50,6 @@ func (m *merchantRepo) DeleteMerchant(id string) error {
 
 }
 
-
-
 func NewMerchantRepo(db *gorm.DB) IMerchantRepo {
 	return &merchantRepo{
 		db,

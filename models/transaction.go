@@ -14,8 +14,8 @@ const (
 	)
 type Transaction struct {
 	ID 					uuid.UUID			`gorm:"type:uuid;unique;index" json:"id"`
-	TransactionDate 	string				`gorm:"column: transaction_date" json:"transaction_date"`
-	TotalTransaction	int64  				`gorm:"column: total_transaction" json:"total_transaction"`
+	TransactionDate 	string				`gorm:"column:transaction_date" json:"transaction_date"`
+	TotalTransaction	int64  				`gorm:"column:total_transaction" json:"total_transaction"`
 	Status				statusTransaction 	`gorm:"column:status" json:"status"`
 	MerchantID 			uuid.UUID			`gorm:"null" json:"merchant_id"`
 	Merchant	  		*Merchant			`gorm:"foreignKey:MerchantID;references:ID;not null" json:"merchant"`
